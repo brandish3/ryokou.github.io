@@ -3,380 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎉箱根満喫！お父さんのお誕生日を祝う初夏の思い出旅🎉</title>
+    <title>🎉祝・父誕生日！箱根旅行のしおり | 絶景・温泉・グルメを満喫する2日間🎉</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-            background-color: #FFFBF0; /* Light Cream */
-            color: #333333;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #FDFBF5; /* やさしいクリーム色 */
+            color: #4A4A4A;
+        }
+        .header-title {
+            color: #C05A56;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         .tab-button {
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #6B7280;
+            border-bottom: 3px solid transparent;
         }
         .tab-button.active {
-            background-color: #D9534F; /* Soft Red */
-            color: white;
-            border-bottom-width: 2px;
-            border-color: #B94441; /* Darker Soft Red */
+            color: #C05A56;
+            border-bottom-color: #C05A56;
         }
         .tab-button:not(.active):hover {
-            background-color: #F0D9D8; /* Lighter Soft Red */
+            background-color: #F9F3E5;
+            color: #C05A56;
         }
         .content-card {
-            background-color: #FFFFFF; /* White */
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out;
+            background-color: #FFFFFF;
+            border-radius: 0.75rem; /* 少し丸みを強く */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 1px solid #F0EAE0;
         }
         .content-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
         .timeline-dot {
-            background-color: #D9534F; /* Soft Red */
+            background-color: #C05A56;
+            box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px #E5CFCF;
         }
         .timeline-line {
-            background-color: #D9534F; /* Soft Red */
+            background-color: #E5CFCF;
         }
         .checklist-item input:checked + label {
             text-decoration: line-through;
-            color: #777;
+            color: #9CA3AF;
         }
         .checklist-item input:checked + label .emoji-check {
             opacity: 1;
+            transform: scale(1.1);
         }
         .emoji-check {
-            opacity: 0.2;
-            transition: opacity 0.3s;
+            opacity: 0.3;
+            transition: all 0.3s;
         }
         .section-title {
-            color: #D9534F; /* Soft Red */
-            border-bottom: 2px solid #F0D9D8; /* Lighter Soft Red */
+            color: #C05A56;
+            border-bottom: 2px solid #F9F3E5;
         }
         .footer-text {
-            color: #777;
+            color: #888888;
         }
-        .placeholder-image {
-            background-color: #E9ECEF; /* Light Gray for placeholder */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6C757D; /* Gray text for placeholder */
-            font-size: 0.875rem;
-            border-radius: 0.25rem;
-        }
-        /* Ensure images in timeline take up reasonable space and don't overflow */
         .timeline-image {
-            max-width: 100%; /* Ensure image is not wider than its container */
-            height: auto;   /* Maintain aspect ratio */
-            max-height: 200px; /* Limit height to prevent overly large images */
-            object-fit: cover; /* Cover the area, cropping if necessary */
-            border-radius: 0.375rem; /* Tailwind's rounded-md */
-            margin-top: 0.75rem; /* Tailwind's mt-3 */
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-top: 0.75rem;
+            border: 2px solid #F0EAE0;
         }
-
+        .advice-box {
+            background-color: #FDFBF5;
+            border-left: 4px solid #FBBF24; /* 黄色いアクセント */
+            padding: 0.75rem 1rem;
+            margin-top: 0.75rem;
+            border-radius: 0.375rem;
+        }
     </style>
 </head>
 <body class="antialiased">
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-4xl">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-5xl">
         <header class="text-center mb-8">
-            <h1 class="text-2xl font-bold text-[#D9534F]">🎉箱根満喫！お父さんのお誕生日を祝う初夏の思い出旅🎉</h1>
-            <p class="text-xl text-gray-700 mt-2">～ 絶景・食べ歩き・温泉で癒される贅沢な2日間 ～</p>
+            <h1 class="text-3xl sm:text-4xl font-bold header-title">🎉祝・お父さん誕生日！箱根満喫 初夏の思い出旅🎉</h1>
+            <p class="text-lg text-gray-600 mt-2">～ ご両親と楽しむ 絶景・グルメ・温泉 癒しの2日間 ～</p>
         </header>
 
-        <nav class="mb-8">
-            <ul class="flex flex-wrap justify-center border-b-2 border-gray-200">
-                <li><button class="tab-button active py-3 px-4 sm:px-6 font-semibold rounded-t-lg focus:outline-none" data-tab="overview">概要</button></li>
-                <li><button class="tab-button py-3 px-4 sm:px-6 font-semibold rounded-t-lg focus:outline-none" data-tab="day1">1日目</button></li>
-                <li><button class="tab-button py-3 px-4 sm:px-6 font-semibold rounded-t-lg focus:outline-none" data-tab="day2">2日目</button></li>
-                <li><button class="tab-button py-3 px-4 sm:px-6 font-semibold rounded-t-lg focus:outline-none" data-tab="packing">持ち物</button></li>
+        <nav class="mb-8 bg-white/70 backdrop-blur-sm sticky top-0 z-10 rounded-lg shadow-sm">
+            <ul class="flex flex-wrap justify-center">
+                <li><button class="tab-button active py-3 px-4 sm:px-6 focus:outline-none" data-tab="overview">概要</button></li>
+                <li><button class="tab-button py-3 px-4 sm:px-6 focus:outline-none" data-tab="day1">1日目</button></li>
+                <li><button class="tab-button py-3 px-4 sm:px-6 focus:outline-none" data-tab="day2">2日目</button></li>
+                <li><button class="tab-button py-3 px-4 sm:px-6 focus:outline-none" data-tab="packing">持ち物</button></li>
             </ul>
         </nav>
 
         <main id="tab-content">
             <section id="overview" class="tab-pane active space-y-6">
-                <div class="content-card p-6">
-                    <p class="text-gray-700 leading-relaxed">
-                        初夏の箱根で、お父さんの誕生日を盛大にお祝いしましょう！
-                        雄大な自然、心安らぐ温泉、そして美味しいグルメの数々…
-                        海賊船とロープウェイを駆使して、箱根の魅力をたっぷり満喫する、
-                        忘れられない2日間の旅にしましょう！
+                <div class="content-card p-6 text-center">
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        初夏の爽やかな風が吹く箱根で、忘れられない家族旅行を。<br>
+                        雄大な自然、心安らぐ温泉、そして美味しいグルメの数々…<br>
+                        箱根フリーパスを片手に、箱根の魅力をゆったりと満喫する、最高の2日間にしましょう！
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="content-card p-6">
-                        <h3 class="text-xl font-semibold text-[#D9534F] mb-2">📅 旅行期間</h3>
-                        <p>2025年6月20日（金）～21日（土）</p>
+                        <h3 class="text-xl font-semibold text-[#C05A56] mb-3">📅 旅行期間</h3>
+                        <p class="text-lg">2025年6月20日（金）～21日（土）</p>
                     </div>
                     <div class="content-card p-6">
-                        <h3 class="text-xl font-semibold text-[#D9534F] mb-2">🏨 宿泊先</h3>
-                        <p>ホテルグリーンプラザ箱根</p>
+                        <h3 class="text-xl font-semibold text-[#C05A56] mb-3">🏨 宿泊先</h3>
+                        <p class="text-lg">ホテルグリーンプラザ箱根</p>
+                        <p class="text-sm text-gray-500 mt-1">（TEL: 0460-84-8611）</p>
                     </div>
-                    <div class="content-card p-6">
-                        <h3 class="text-xl font-semibold text-[#D9534F] mb-2">🎫 現地での利用きっぷ</h3>
-                        <p>箱根フリーパス（大人5,000円）<br></p>
+                    <div class="content-card p-6 md:col-span-2">
+                        <h3 class="text-xl font-semibold text-[#C05A56] mb-3">🚗 交通手段 & 🎫 きっぷ</h3>
+                        <p><b>往路・帰路:</b> 自家用車</p>
+                        <p><b>現地移動:</b> 箱根フリーパス（2日間用 大人 6,100円）<br>
+                        <span class="text-sm text-gray-500">※海賊船、ロープウェイ、ケーブルカー、登山電車、指定区間のバスが乗り放題！事前にコンビニで購入しておくとスムーズです。</span></p>
                     </div>
-                    <div class="content-card p-6">
-                        <h3 class="text-xl font-semibold text-[#D9534F] mb-2">🌸 旅のテーマ</h3>
-                        <p>無理なく楽しむ箱根の魅力満喫旅！<br>海賊船とロープウェイ、そして箱根フリーパスを最大限に活用して、箱根の絶景・名物・温泉・乗り物をたっぷり味わう2日間！</p>
+                     <div class="content-card p-6 md:col-span-2">
+                        <h3 class="text-xl font-semibold text-[#C05A56] mb-3">🌟 旅のテーマ</h3>
+                        <p><b>「ご両親と無理なく楽しむ、箱根いいとこどり旅」</b><br>
+                        移動の負担は少なく、でも見どころはしっかり押さえる！海賊船とロープウェイを駆使し、箱根の絶景・名物・温泉・乗り物をゆったりと味わい尽くす2日間です。
+                        </p>
                     </div>
                 </div>
-                 <div class="content-card p-6 placeholder-image h-90">
-                    <img src="https://github.com/brandish3/ryokou.github.io/blob/main/hakone.jpg?raw=true" alt="箱根の美しい風景と海賊船" class="w-full h-full object-cover rounded" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9ECEF/6C757D?text=箱根の風景';">
+                 <div class="content-card p-2">
+                     <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1740&auto=format&fit=crop" alt="箱根の美しい風景と芦ノ湖の海賊船" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/800x400/E9ECEF/6C757D?text=箱根の風景';">
                 </div>
             </section>
 
             <section id="day1" class="tab-pane hidden space-y-6">
-                <h2 class="text-2xl font-semibold section-title pb-2 mb-6">🗓️ Day 1：2025年6月20日（金）大涌谷・早雲山・箱根神社　観光！！　🎉お父さんのお誕生日🎉</h2>
-                <p class="text-gray-700 mb-6">1日目は箱根の主要な観光スポットを巡ります。大涌谷の迫力ある景色や早雲山の足湯、芦ノ湖の海賊船、そして箱根神社への参拝など盛りだくさんの内容です！</p>
-                <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent via-[#D9534F] to-transparent">
+                <h2 class="text-2xl font-bold section-title pb-2 mb-4">🗓️ Day 1：2025年6月20日（金） | 🎂お父さんの誕生日！神社・絶景・食べ歩き！</h2>
+                <div class="advice-box">
+                    <p class="font-semibold">💡 1日目のポイント</p>
+                    <p class="text-sm text-gray-600">朝一で箱根神社に車を停め、公共交通機関で効率よく周遊します。同じ道を引き返す無駄をなくし、ご両親の負担を軽減するプランです。ホテルチェックインから逆算しているので、焦らず楽しめますよ。</p>
+                </div>
+                <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:timeline-line">
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🚗
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">4:20頃｜実家を出発</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">早朝</time>
-                            </div>
-                            <div class="text-gray-600">安全運転で時間に余裕をもって、まずは海老名ＳＡへ</div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚗</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">8:00頃 | 箱根神社 第１駐車場（無料）到着</div>
+                            <div class="text-gray-600 text-sm">朝の空いている時間帯に到着。お手洗いを済ませて、いよいよ観光スタート！</div>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🍞
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">⛩️</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">8:15～9:30 | 箱根神社 参拝 & 平和の鳥居で記念撮影（滞在 約1時間15分）</div>
+                            <div class="text-gray-600 text-sm">まずは芦ノ湖畔の「平和の鳥居」へ。朝は人が少なく、写真撮影の絶好のチャンス！その後、本殿へ参拝。社殿右隣の「なで小槌」も忘れずに。</div>
+                            <div class="advice-box text-sm"><b>📸 写真スポット:</b> 湖に浮かぶように立つ平和の鳥居は最高の撮影スポットです。<br><b>❤️ アドバイス:</b> 本殿への階段は少し急なので、ゆっくり休みながら登りましょう。</div>
+                            <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1740&auto=format&fit=crop" alt="箱根神社の平和の鳥居" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=平和の鳥居';">
                         </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">6:50～7:20｜海老名SAで朝食</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">朝食</time>
-                            </div>
-                            <div class="text-gray-600">名物は「メロンパン♪」</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/melon.JPG?raw=true" alt="海老名SAのメロンパン" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=メロンパン';">
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚢</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">9:45～10:15 | 元箱根港 → 桃源台港（箱根海賊船）</div>
+                            <div class="text-gray-600 text-sm">箱根神社から元箱根港まで徒歩約10分。カラフルな海賊船に乗って、いざ出発！湖上からの景色を楽しみましょう。</div>
+                            <div class="advice-box text-sm"><b>📸 写真スポット:</b> 船上から遠ざかる平和の鳥居や、天気が良ければ富士山も見えます。</div>
                         </div>
                     </div>
                     
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                           🚠
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="font-bold text-gray-800">8:50頃｜現地の姥子駅到着 → ホテルへ駐車</div>
-                            <div class="text-gray-600">姥子駅オープン（9:00）前に到着予定。車を一旦ホテルへ駐車後、駅で合流。「箱根フリーパス（２日間有効）」全員分購入</div>
-                        </div>
-                    </div>
-
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🌋
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="font-bold text-gray-800">9:15～10:55｜【大涌谷】観光（息吹のデッキで記念撮影、岩の巣ベンチで休憩、食べ歩き）</div>
-                            <div class="text-gray-600">ロープウェイで大涌谷へ（姥子→大涌谷 約8分）。噴煙と火山地帯の大自然を満喫！（滞在約90分）<br>ニュースポットの息吹のデッキで記念撮影！🥚黒たまご（4個入680円）で延命祈願！<br>🍦黒たまごソフトクリームも絶品！<br>📸 写真スポット：噴煙、玉子茶屋、火山景色</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/oowakudani.jpg?raw=true" alt="大涌谷" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=大涌谷';">
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/kinen.JPG?raw=true" alt="息吹のデッキ" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=息吹のデッキ';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ 息吹のデッキ</p></div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/yawa.JPG?raw=true" alt="岩の巣ベンチ" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=岩の巣ベンチ';">
-                             <div><p class="text-sm text-gray-500 mt-1"> ↑ 岩の巣ベンチ</p></div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/kurotamago.jpg?raw=true" alt="黒たまご" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=黒たまご';">
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚠</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                             <div class="font-bold text-gray-800">10:30～12:00 | 大涌谷 観光（滞在 約1時間）</div>
+                             <div class="text-gray-600 text-sm">桃源台駅からロープウェイで大涌谷へ（約16分）。迫力満点の噴煙地帯を散策。夕食に備え、昼食はここで食べ歩き♪</div>
+                             <div class="advice-box text-sm"><b>🥚 食べ歩き:</b> 名物「黒たまご」（5個入500円）。1つ食べると7年寿命が延びる！？濃厚な「黒たまごソフト」（約500円）もおすすめです。<br><b>❤️ アドバイス:</b> 風向きによっては火山ガスの匂いが強いので、無理せず休憩を取りましょう。</div>
+                             <img src="https://images.unsplash.com/photo-1628325852577-8433f4435504?q=80&w=1740&auto=format&fit=crop" alt="大涌谷の噴煙" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=大涌谷';">
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🌄
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="font-bold text-gray-800">11:05～12:25｜【早雲山】cu-mo箱根で足湯体験</div>
-                            <div class="text-gray-600">ロープウェイで早雲山駅へ（大涌谷→早雲山 約8分）。展望テラスで絶景を眺めながら無料の足湯でほっこり♪（滞在約80分）<br>🍰「ニューベル（スムージー）」（750円）や「くもパン」（250円）など食べ歩き<br>📸 写真スポット：テラスからの相模湾ビュー（晴天時）</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/ashiyu.JPG?raw=true" alt="cu-mo箱根の足湯と景色" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=足湯';">
-                             <div><p class="text-sm text-gray-500 mt-1"> ↑ 足湯（無料）</p></div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/sumu_kumo.jpg?raw=true" alt="スムージーとくもぱん" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=スムージーとくもパン';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ ニューベル（スムージー）とくもぱん</p></div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">♨️</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">12:15～13:30 | 早雲山駅 "cu-mo箱根"（滞在 約1時間）</div>
+                            <div class="text-gray-600 text-sm">大涌谷からロープウェイで早雲山駅へ（約8分）。展望テラスにある無料の足湯で、絶景を眺めながらリラックスタイム。</div>
+                            <div class="advice-box text-sm"><b>☁️ 食べ歩き:</b> ふわふわの「くもぱん」（約350円）や、オリジナルスムージー「ニューベル」（約750円）が人気です。<br><b>❤️ アドバイス:</b> 足湯用のタオルを持参すると便利です（現地でオリジナルタオルも販売しています）。</div>
+                             <img src="https://images.unsplash.com/photo-1616363039755-7ab4a54a224a?q=80&w=1740&auto=format&fit=crop" alt="早雲山の足湯と景色" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=cu-mo箱根';">
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🚢
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="font-bold text-gray-800">12:25～13:30｜【桃源台港→元箱根港】海賊船に乗船！</div>
-                            <div class="text-gray-600">ロープウェイで桃源台駅へ（早雲山→桃源台 約20分）。桃源台港から海賊船に乗船！（約25分）。デッキから見る芦ノ湖の絶景に感動！<br>📸 写真スポット：湖上の風景、鳥居、箱根の山々</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/ashinoko.JPG?raw=true" alt="芦ノ湖の海賊船と鳥居" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=芦ノ湖の海賊船';">
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                         <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚌</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">13:45～15:00 | 桃源台経由で元箱根へ</div>
+                            <div class="text-gray-600 text-sm">ロープウェイで桃源台駅へ戻り（早雲山→桃源台 約24分）、箱根登山バス（T路線など）で元箱根港へ戻ります（約30分）。車窓からの景色も楽しんで。</div>
                         </div>
                     </div>
                     
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🏯
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                         <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🏨</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">15:15～16:00 | 車をピックアップしてホテルへ</div>
+                            <div class="text-gray-600 text-sm">元箱根港から駐車場へ戻り、車でホテルグリーンプラザ箱根へ（約30分）。緑の中のドライブを楽しみながら向かいましょう。</div>
                         </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="font-bold text-gray-800">13:45～15:15｜【箱根神社】参拝 & 平和の鳥居で記念撮影！</div>
-                            <div class="text-gray-600">元箱根港から徒歩で箱根神社へ（約15分、ゆるやかな坂）。本殿参拝&御朱印をいただいた後、人気の「平和の鳥居」で記念撮影。移動中はベンチで休憩を。（滞在約90分）<br>📸 写真スポット：平和の鳥居、杉並木、本殿</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/torii.JPG?raw=true" alt="箱根神社の平和の鳥居" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=平和の鳥居';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ 平和の鳥居</p></div>
+                    </div>
+                    
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🎉</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">16:00～ | ホテルチェックイン & 温泉と夕食</div>
+                            <div class="text-gray-600 text-sm">お疲れ様でした！チェックイン後は、自慢の露天風呂でゆっくり疲れを癒してください。夜は美味しいバイキングで、お父さんの誕生日をみんなでお祝いしましょう！🎂🎉</div>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            ⛵
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="font-bold text-gray-800">15:30～16:00｜【元箱根港→桃源台港】再度海賊船で帰還</div>
-                            <div class="text-gray-600">平和の鳥居を芦ノ湖側から見て楽しみながら桃源台へ。（約25分）</div>
-                        </div>
-                    </div>
-
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🏨
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="font-bold text-gray-800">16:20～夕方｜ホテルチェックイン → 夕食バイキング</div>
-                            <div class="text-gray-600">ロープウェイで姥子駅へ。（桃源台→姥子約10分）姥子駅から徒歩（約5分）でホテルへ。ホテルで温泉を楽しんだあと、夕食はゆっくりとバイキング🍽<br>🎂お父さんの誕生日祝い！</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/hotel.JPG?raw=true" alt="ホテルのイメージ" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=ホテル';">
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/onsen.JPG?raw=true" alt="温泉のイメージ" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=温泉';">
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/buffet.JPG?raw=true" alt="バイキングのイメージ" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=バイキング';">
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/buffet2.JPG?raw=true" alt="バイキングのイメージ２" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=バイキング2';">
-                        </div>
-                    </div>
                 </div>
             </section>
 
             <section id="day2" class="tab-pane hidden space-y-6">
-                <h2 class="text-2xl font-semibold section-title pb-2 mb-6">🗓️ Day 2：2025年6月21日（土）箱根フリーパスで乗り物体験</h2>
-                <p class="text-gray-700 mb-6">2日目は箱根フリーパスを活用し、様々な乗り物を体験しながら箱根湯本を目指します。</p>
-                <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent via-[#D9534F] to-transparent">
-                    
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🌞
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">朝｜ホテルで朝食・早めのチェックアウト</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">準備</time>
-                            </div>
-                            <div class="text-gray-600">朝食後、少し早めにチェックアウトの準備をしましょう。チェックアウトは9:30頃を目指します。荷物は車に積み込みます。</div>
+                <h2 class="text-2xl font-bold section-title pb-2 mb-4">🗓️ Day 2：2025年6月21日（土） | 乗り物体験と箱根湯本散策</h2>
+                 <div class="advice-box">
+                    <p class="font-semibold">💡 2日目のポイント</p>
+                    <p class="text-sm text-gray-600">箱根ならではの乗り物を乗り継いで、旅情あふれる箱根湯本へ。スイッチバックや絶景の鉄橋など、移動そのものが楽しい一日です。お土産は最後に箱根湯本でまとめるのがおすすめです。</p>
+                </div>
+                <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:timeline-line">
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🏨</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">～9:30 | 朝食後、チェックアウト</div>
+                            <div class="text-gray-600 text-sm">ゆっくり朝食をとり、9:30にチェックアウト。荷物は車に置いて、身軽に出発！</div>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🏨
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                             <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">9:30｜ホテルグリーンプラザ箱根 チェックアウト</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">出発</time>
-                            </div>
-                            <div class="text-gray-600">箱根フリーパスを持って出発！</div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚠</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">9:40～10:40 | 強羅へ移動（ロープウェイ＆ケーブルカー）</div>
+                            <div class="text-gray-600 text-sm">ホテルから徒歩3分の姥子駅からロープウェイで早雲山へ（約8分）。ケーブルカーに乗り換え、強羅駅へ向かいます（約10分）。急勾配をぐんぐん登るレトロな乗り心地を楽しんで。</div>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🚠➡️🚞
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">9:30～10:15｜強羅へ移動（ロープウェイ＆ケーブルカー体験①）</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">移動</time>
-                            </div>
-                            <div class="text-gray-600">姥子駅からロープウェイで早雲山駅へ（約10分）。早雲山駅で箱根登山ケーブルカーに乗り換え、強羅駅へ向かいます（約10分）。ケーブルカーの風情ある乗車体験。乗り換え時間もみて、約45分。<br>📸【写真】 ケーブルカーの車内や駅の雰囲気、車窓からの景色。</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/KEBURU.jpg?raw=true" alt="ケーブルカー" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=ケーブルカー';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ ケーブルカー</p></div>
-                        </div>
-                    </div>
-                    
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            ⏱️🚻
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">10:15～10:38｜強羅駅で時間調整・お手洗いなど</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">休憩</time>
-                            </div>
-                            <div class="text-gray-600">約23分。強羅駅に到着後、登山電車の出発時刻まで駅周辺で少し時間調整。お手洗いを済ませたり、飲み物を購入したりしましょう。<br>📸【写真】 強羅駅の駅舎、停車している登山電車。</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/GORA.jpg?raw=true" alt="強羅駅" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=強羅駅';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ 強羅駅</p></div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚃</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">10:59～11:40 | 箱根登山電車で箱根湯本へ</div>
+                            <div class="text-gray-600 text-sm">いよいよ箱根登山電車の旅！ジグザグに進むスイッチバック（3回）や、スリル満点の出山鉄橋（早川橋梁）からの絶景は必見です。</div>
+                            <div class="advice-box text-sm"><b>📸 写真スポット:</b> 出山鉄橋は進行方向左側の席がおすすめ！運転手さんと車掌さんが乗り降りするスイッチバックもシャッターチャンス。</div>
+                            <img src="https://images.unsplash.com/photo-1593383508544-33a79d031d27?q=80&w=1787&auto=format&fit=crop" alt="箱根登山電車とあじさい" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=箱根登山電車';">
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🚃
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                             <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">10:38～11:18｜箱根登山電車乗車体験② (強羅駅 → 箱根湯本駅)</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">移動</time>
-                            </div>
-                            <div class="text-gray-600">強羅駅から箱根登山電車に乗車し、箱根湯本駅へ（約40分）。スイッチバック（3回）と「出山の鉄橋」を体験。車窓からの景色も楽しみましょう。<br>📸【写真】 登山電車のスイッチバックの様子（車内から）、出山の鉄橋など車窓からの見どころ。</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/SWITCH.jpg?raw=true" alt="登山電車" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=登山電車';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ 登山電車</p></div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/IMG_5606.jpeg?raw=true" alt="早川橋梁" class="timeline-image" style="max-height: 250px;" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=早川橋梁';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ 早川橋梁(出山の鉄橋)</p></div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🍱</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">11:40～14:00 | 箱根湯本 散策＆昼食・お土産（滞在 約2時間20分）</div>
+                            <div class="text-gray-600 text-sm">活気あふれる駅前商店街を散策。昼食は人気の「湯葉丼 直吉」へ。とろとろの湯葉が絶品です。お土産もここで探しましょう。</div>
+                            <div class="advice-box text-sm"><b>🥢 昼食:</b> 「湯葉丼 直吉」は行列必至なので、早めに向かうのが吉。湯葉丼は1,000円前後です。<br><b>🎁 お土産:</b> 温泉まんじゅうや干物、寄木細工など、名産品がたくさん！「菊川商店」の箱根まんじゅうは食べ歩きにも最適。</div>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🛍️🍽️
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">11:18～13:18｜箱根湯本駅で軽食 または 短時間でお土産購入</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">昼食/買物</time>
-                            </div>
-                            <div class="text-gray-600">約2時間。箱根湯本駅に到着。昼食とお土産選び<br>🎁【お土産】 温泉まんじゅう、干物など。</div>
-                            <img src="https://github.com/brandish3/ryokou.github.io/blob/main/YUMOTO.jpg?raw=true" alt="箱根湯本" class="timeline-image" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E9ECEF/6C757D?text=箱根湯本';">
-                            <div><p class="text-sm text-gray-500 mt-1"> ↑ 箱根湯本</p></div>
-                        </div>
-                    </div>
-                    
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🚌➡️🚠
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">13:18～14:30頃｜箱根湯本駅からホテルへ戻る（バス＋ロープウェイ）</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">移動</time>
-                            </div>
-                            <div class="text-gray-600">箱根湯本駅からホテルグリーンプラザ箱根へ戻ります。箱根登山バス（T路線「桃源台」行きなど、フリーパス利用可）に乗車し「桃源台」へ（約40～50分、道路状況により変動）。桃源台から箱根ロープウェイ（フリーパス利用可）で「姥子駅」へ（約8分）。姥子駅からホテルまでは徒歩約3分。</div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚌</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">14:00～15:10 | バスとロープウェイでホテルへ</div>
+                            <div class="text-gray-600 text-sm">箱根湯本駅からバスで桃源台へ（約40分）。桃源台からロープウェイで姥子駅へ戻ります（約8分）。</div>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🚗🅿️
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">14:30頃｜ホテルで車をピックアップ</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">準備</time>
-                            </div>
-                            <div class="text-gray-600">ホテルで車を受け取ります。お手洗いを済ませるなど、出発準備。</div>
-                        </div>
-                    </div>
-
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#D9534F] group-[.is-active]:bg-[#5CB85C] text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                            🛣️
-                        </div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4 md:p-6">
-                            <div class="flex items-center justify-between space-x-2 mb-1">
-                                <div class="font-bold text-gray-800">14:30～15:00｜帰路へ</div>
-                                <time class="font-caveat font-medium text-sm text-[#D9534F]">出発</time>
-                            </div>
-                            <div class="text-gray-600">15:00までの出発を目指し、箱根の思い出を胸に、安全運転でご自宅へ。</div>
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full timeline-dot text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">🚗</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-4">
+                            <div class="font-bold text-gray-800">15:15頃 | 車をピックアップし、帰路へ</div>
+                            <div class="text-gray-600 text-sm">ホテルで車を受け取り、旅の終わり。楽しかった思い出を胸に、安全運転でご自宅までお帰りください。</div>
                         </div>
                     </div>
 
@@ -384,57 +284,28 @@
             </section>
 
             <section id="packing" class="tab-pane hidden space-y-4">
-                <h2 class="text-2xl font-semibold section-title pb-2 mb-6">🎒 おすすめ持ち物リスト</h2>
-                <p class="text-gray-700 mb-6">旅行を快適に楽しむために、これらの持ち物をお忘れなく！チェックリストで確認しましょう。</p>
+                <h2 class="text-2xl font-bold section-title pb-2 mb-4">🎒 旅の持ち物チェックリスト</h2>
                 <div class="content-card p-6">
-                    <ul id="packing-list-items" class="space-y-3">
-                        <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item1" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item1" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>タオル（cu-mo箱根の足湯用）</label>
-                        </li>
-                        <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item2" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item2" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>歩きやすい靴</label>
-                        </li>
-                        <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item3" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item3" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>羽織り（ロープウェイ・船上は涼しいことも）</label>
-                        </li>
-                        <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item4" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item4" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>小銭（食べ歩きやお土産などで便利）</label>
-                        </li>
-                        <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item5" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item5" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>御朱印帳</label>
-                        </li>
-                         <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item6" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item6" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>箱根フリーパス（2日目用）</label>
-                        </li>
-                         <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item7" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item7" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>カメラ・スマートフォン（思い出記録用）</label>
-                        </li>
-                        <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item8" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item8" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>モバイルバッテリー</label>
-                        </li>
-                         <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item9" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item9" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>雨具（折り畳み傘など）</label>
-                        </li>
-                        <li class="checklist-item flex items-center">
-                            <input type="checkbox" id="item10" class="mr-3 h-5 w-5 text-[#5CB85C] border-gray-300 rounded focus:ring-[#5CB85C]">
-                            <label for="item10" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>常備薬・酔い止めなど</label>
-                        </li>
-                    </ul>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3" id="packing-list-items">
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item1" class="mr-3 h-5 w-5 rounded"><label for="item1" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>箱根フリーパス（引換券）</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item2" class="mr-3 h-5 w-5 rounded"><label for="item2" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>歩きやすい靴・履き慣れた靴</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item3" class="mr-3 h-5 w-5 rounded"><label for="item3" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>着替え（1泊2日分）</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item4" class="mr-3 h-5 w-5 rounded"><label for="item4" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>羽織れる上着（船上や山の上は涼しい）</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item5" class="mr-3 h-5 w-5 rounded"><label for="item5" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>タオル（足湯用）</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item6" class="mr-3 h-5 w-5 rounded"><label for="item6" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>雨具（折りたたみ傘など）</p></label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item7" class="mr-3 h-5 w-5 rounded"><label for="item7" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>カメラ・スマートフォン</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item8" class="mr-3 h-5 w-5 rounded"><label for="item8" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>モバイルバッテリー</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item9" class="mr-3 h-5 w-5 rounded"><label for="item9" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>健康保険証・お薬手帳</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item10" class="mr-3 h-5 w-5 rounded"><label for="item10" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>常備薬・酔い止め</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item11" class="mr-3 h-5 w-5 rounded"><label for="item11" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>御朱印帳（集めている場合）</label></div>
+                        <div class="checklist-item flex items-center"><input type="checkbox" id="item12" class="mr-3 h-5 w-5 rounded"><label for="item12" class="text-gray-700 flex items-center cursor-pointer"><span class="emoji-check mr-2">✅</span>小銭（食べ歩きに便利）</p></label></div>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
-            <p class="footer-text text-xs">この旅行がお父さんにとって、そしてご家族にとって<br>最高に楽しく、心に残る初夏の思い出となりますように！</p>
+        <footer class="text-center mt-12 pt-8 border-t border-gray-200">
+            <p class="footer-text text-sm">この旅が、ご家族にとって<br>最高に楽しく、心に残る初夏の思い出となりますように！</p>
         </footer>
     </div>
 
@@ -467,17 +338,14 @@
 
         // Packing list interactivity
         const checklistItems = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-        const packingListKey = 'hakonePackingList_'; // Unique key for this trip
+        const packingListKey = 'hakoneTrip_20250620_packingList_'; // Unique key for this trip
 
         checklistItems.forEach(item => {
-            // Load saved state
+            // Load saved state from localStorage
             const savedState = localStorage.getItem(packingListKey + item.id);
             if (savedState === 'true') {
                 item.checked = true;
-            } else if (savedState === 'false') {
-                item.checked = false;
             }
-
 
             item.addEventListener('change', (event) => {
                 localStorage.setItem(packingListKey + event.target.id, event.target.checked);
